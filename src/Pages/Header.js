@@ -14,7 +14,7 @@ function Header() {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-7">
             <div className="header-info text-center text-md-left">
-              <span>Get up to 50 MBps Download Speed Now Only 4000 TK <Link to="/">Get It Now</Link></span>
+              <span>Get up to 50 MBps Download Speed Now Only 4000 TK <a href="/">Get It Now</a></span>
             </div>
           </div>
           <div className="col-lg-6 col-md-5">
@@ -27,7 +27,7 @@ function Header() {
                 <span id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account <i className="fa fa-caret-down" /></span>
                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                   < Link to="/" className="dropdown-item">Sign In</Link>
-                  <Link to="/" className="dropdown-item">Sign Up</Link>
+                  <a href="/" className="dropdown-item">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -41,9 +41,9 @@ function Header() {
           <div className="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-9">
             {/* Logo */}
             <div className="logo">
-              <Link to="/">
+              <a href="/">
                 <img src="assets/img/logo.png" data-rjs={2} alt="VPNet" />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-xl-8 col-lg-8 col-md-5 col-sm-2 col-3">
@@ -51,32 +51,32 @@ function Header() {
               {/* Header-menu */}
               <div className="header-menu">
                 <ul>
-                  <li className="active"><Link to="/">Home</Link></li>
+                  <li className="active"><a href="/">Home</a></li>
                   <li>
-                    <Link to="/">Area</Link>
+                    <a href="/">Area</a>
                     
                   </li>
                   <li>
-                    <Link to="/">Corporate Internet</Link>
+                    <a href="/">Corporate Internet</a>
                     
                   </li>
                   <li>
-                    <Link to="/">Home Internet <i className="fa fa-caret-down" /></Link>
+                    <a href="/">Home Internet <i className="fa fa-caret-down" /></a>
                     <ul>
-                      <li><Link to="/">Student Packages</Link></li>
-                      <li><Link to="/">Kids Packages</Link></li>
-                      <li><Link to="/">Most Popular Packages</Link></li>
-                      <li><Link to="/">Gamer Packages</Link></li>
+                      <li><a href="/">Student Packages</a></li>
+                      <li><a href="/">Kids Packages</a></li>
+                      <li><a href="/">Most Popular Packages</a></li>
+                      <li><a href="/">Gamer Packages</a></li>
                       
                     </ul>
                   </li>
                   
                   <li>
-                    <Link to="/">Services <i className="fa fa-caret-down" /></Link>
+                    <a href="/">Services <i className="fa fa-caret-down" /></a>
                     <ul>
-                      <li><Link to="/">All Services</Link></li>
-                      <li><Link to="/">Cable TV</Link></li>
-                      <li><Link to="/">Dedicated Server</Link></li>
+                      <li><a href="/All-Service">All Services</a></li>
+                      <li><a href="/Tv-Service">Cable TV</a></li>
+                      <li><a href="/Dedicated-server">Dedicated Server</a></li>
                       
                       
                     </ul>
@@ -85,14 +85,14 @@ function Header() {
 
                 
                   <li>
-                    <Link to="/">Payment & More <i className="fa fa-caret-down" /></Link>
+                    <a href="/">Payment & More <i className="fa fa-caret-down" /></a>
                     <ul>
                      
-                      <li><Link to="/">Bill Pay</Link></li>
-                      <li><Link to="/">About Us</Link></li>
-                      <li><Link to="/">Contact Us</Link></li>
-                      <li><Link to="/">Support</Link></li>
-                      <li><Link to="/">Special Offers</Link></li>
+                      <li><a href="/">Bill Pay</a></li>
+                      <li><a href="/">About Us</a></li>
+                      <li><a href="/">Contact Us</a></li>
+                      <li><a href="/">Support</a></li>
+                      <li><a href="/">Special Offers</a></li>
                     </ul>
                   </li>
                   
