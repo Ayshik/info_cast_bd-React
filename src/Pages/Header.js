@@ -57,7 +57,7 @@ function Header() {
                     
                   </li>
                   <li>
-                    <a href="/">Corporate Internet</a>
+                    <a href="/Corporate">Corporate Internet</a>
                     
                   </li>
                   <li>

@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import All_service from './Pages/All_service';
 import Cable_tv from './Pages/Cable_tv';
 import Dedicated_server from './Pages/Dedicated_server';
+import Corporate from './Pages/Corporate';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,7 +31,9 @@ ReactDOM.render(
             <Route exact path="/Dedicated-server">
               <Dedicated_server/>
             </Route>
-
+            <Route exact path="/Corporate">
+              <Corporate/>
+            </Route>
         </Switch>
         <Footer/>
     </Router>
