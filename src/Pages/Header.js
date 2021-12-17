@@ -63,10 +63,10 @@ function Header() {
                   <li>
                     <a href="/">Home Internet <i className="fa fa-caret-down" /></a>
                     <ul>
-                      <li><a href="/">Student Packages</a></li>
-                      <li><a href="/">Kids Packages</a></li>
-                      <li><a href="/">Most Popular Packages</a></li>
-                      <li><a href="/">Gamer Packages</a></li>
+                      <li><a href="/Student_packages">Student Packages</a></li>
+                      <li><a href="/Kids_packages">Kids Packages</a></li>
+                      <li><a href="/Most_popular_packages">Most Popular Packages</a></li>
+                      <li><a href="/Gamer_packages">Gamer Packages</a></li>
                       
                     </ul>
                   </li>
@@ -88,11 +88,10 @@ function Header() {
                     <a href="/">Payment & More <i className="fa fa-caret-down" /></a>
                     <ul>
                      
-                      <li><a href="/">Bill Pay</a></li>
-                      <li><a href="/">About Us</a></li>
+                      <li><a href="/Bill_pay">Bill Pay</a></li>
+                      <li><a href="/About_us">About Us</a></li>
                       <li><a href="/">Contact Us</a></li>
-                      <li><a href="/">Support</a></li>
-                      <li><a href="/">Special Offers</a></li>
+                      <li><a href="/Special_offers">Special Offers</a></li>
                     </ul>
                   </li>
                   
