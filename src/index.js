@@ -12,7 +12,6 @@ import Dedicated_server from './Pages/Dedicated_server';
 import Corporate from './Pages/Corporate';
 import About_us from './Pages/About_us';
 import Gamer_packages from './Pages/Gamer_packages';
-import Most_popular_packages from './Pages/Most_popular_packages';
 import Student_packages from './Pages/Student_packages';
 import Kids_packages from './Pages/Kids_packages';
 import Bill_pay from './Pages/Bill_pay';
@@ -48,9 +47,6 @@ ReactDOM.render(
             </Route>
             <Route exact path="/Gamer_packages">
               <Gamer_packages/>
-            </Route>
-            <Route exact path="/Most_popular_paclages">
-              <Most_popular_packages/>
             </Route>
             <Route exact path="/Kids_packages">
               <Kids_packages/>

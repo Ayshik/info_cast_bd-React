@@ -65,8 +65,8 @@ function Header() {
                     <ul>
                       <li><a href="/Student_packages">Student Packages</a></li>
                       <li><a href="/Kids_packages">Kids Packages</a></li>
-                      <li><a href="/Most_popular_packages">Most Popular Packages</a></li>
                       <li><a href="/Gamer_packages">Gamer Packages</a></li>
+                      
                       
                     </ul>
                   </li>
