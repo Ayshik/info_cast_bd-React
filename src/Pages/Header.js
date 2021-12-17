@@ -90,7 +90,7 @@ function Header() {
                      
                       <li><a href="/Bill_pay">Bill Pay</a></li>
                       <li><a href="/About_us">About Us</a></li>
-                      <li><a href="/">Contact Us</a></li>
+                      <li><a href="/Contact_us">Contact Us</a></li>
                       <li><a href="/Special_offers">Special Offers</a></li>
                     </ul>
                   </li>

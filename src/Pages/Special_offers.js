@@ -28,7 +28,7 @@ const Special_offers=()=>{
                         <li><span>01 year</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>12.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>400 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
@@ -45,7 +45,7 @@ const Special_offers=()=>{
                         <li><span>02 year</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>24.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>700 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
@@ -61,7 +61,7 @@ const Special_offers=()=>{
                         <li><span>03 year</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>49.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>1000 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
@@ -72,12 +72,12 @@ const Special_offers=()=>{
                       <hr />
                       <ul className="list-unstyled">
                         <li>Free installation</li>
-                        <li>Up to <span>39 Mpbs</span> download speed</li>
+                        <li>Up to <span>60 Mpbs</span> download speed</li>
                         <li>Unlimited data usages</li>
                         <li><span>Unlimited</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>79.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>3000 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>

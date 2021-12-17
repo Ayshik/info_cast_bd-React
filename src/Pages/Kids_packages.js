@@ -18,8 +18,7 @@ const Kids_packages=()=>{
                 <div className="row pb-90">
                   <div className="col-lg-3 col-sm-6">
                     <div className="single-package text-center" data-animate="fadeInUp" data-delay=".1">
-                      <h4>Personal Pack</h4>
-                      <span>for personal user</span>
+                      <h4>Kids pack 1</h4>
                       <hr />
                       <ul className="list-unstyled">
                         <li>Free installation</li>
@@ -28,15 +27,14 @@ const Kids_packages=()=>{
                         <li><span>01 year</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>12.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>300 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
                   <div className="col-lg-3 col-sm-6">
                     <div className="single-package text-center" data-animate="fadeInUp" data-delay=".4">
                       <span className="pupular-pack">Most popular package</span>
-                      <h4>Family Pack</h4>
-                      <span>for family user</span>
+                      <h4>Kids pack 2</h4>
                       <hr />
                       <ul className="list-unstyled">
                         <li>Free installation</li>
@@ -45,14 +43,13 @@ const Kids_packages=()=>{
                         <li><span>02 year</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>24.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>600<span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
                   <div className="col-lg-3 col-sm-6">
                     <div className="single-package text-center" data-animate="fadeInUp" data-delay=".7">
-                      <h4>Business Pack</h4>
-                      <span>for business user</span>
+                      <h4>Kids pack 3</h4>
                       <hr />
                       <ul className="list-unstyled">
                         <li>Free installation</li>
@@ -61,14 +58,13 @@ const Kids_packages=()=>{
                         <li><span>03 year</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>49.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>1000 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
                   <div className="col-lg-3 col-sm-6">
                     <div className="single-package text-center" data-animate="fadeInUp" data-delay={1}>
-                      <h4>Corporate Pack</h4>
-                      <span>for corporate user</span>
+                      <h4>Kids pack 4</h4>
                       <hr />
                       <ul className="list-unstyled">
                         <li>Free installation</li>
@@ -77,7 +73,7 @@ const Kids_packages=()=>{
                         <li><span>Unlimited</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>$</sup>79.50 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>2000 <span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>

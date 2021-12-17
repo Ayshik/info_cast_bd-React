@@ -17,6 +17,7 @@ import Student_packages from './Pages/Student_packages';
 import Kids_packages from './Pages/Kids_packages';
 import Bill_pay from './Pages/Bill_pay';
 import Special_offers from './Pages/Special_offers';
+import Contact_us from './Pages/Contact_us';
 
 
 ReactDOM.render(
@@ -62,6 +63,9 @@ ReactDOM.render(
             </Route>
             <Route exact path="/Special_offers">
               <Special_offers/>
+            </Route>
+            <Route exact path="/Contact_us">
+              <Contact_us/>
             </Route>
         </Switch>
         <Footer/>
