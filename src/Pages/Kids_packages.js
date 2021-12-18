@@ -1,6 +1,20 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
+import axios from 'axios';
+
 
 const Kids_packages=()=>{
+  const [products, setProducts] = useState([]);
+    
+    
+    useEffect(()=>{
+        axios.get("http://localhost:8000/api/kids_packages")
+        .then(resp=>{
+            console.log(resp.data);
+            setProducts(resp.data);
+        }).catch(err=>{
+            console.log(err);
+        });
+    },[]);
   return(
     <div>
     <p>{/* Packages Wrap */}
@@ -15,69 +29,35 @@ const Kids_packages=()=>{
                   </div>
                 </div>
                 {/* Packages */}
+               
+              
+                 
+                      
                 <div className="row pb-90">
-                  <div className="col-lg-3 col-sm-6">
+               {
+               products.map(p=>(
+
+                  <div key={p.id} className="col-lg-3 col-sm-6">
                     <div className="single-package text-center" data-animate="fadeInUp" data-delay=".1">
-                      <h4>Kids pack 1</h4>
-                      <hr />
+                    <h4>{p.name}</h4>
+                      
                       <ul className="list-unstyled">
                         <li>Free installation</li>
-                        <li>Up to <span>15 Mpbs</span> download speed</li>
+                        <li>Up to <span>{p.speed}</span> download speed</li>
                         <li>Unlimited data usages</li>
-                        <li><span>01 year</span> pricing lock guarantee</li>
+                        <li><span>{p.pricinglock}</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
-                      <p><sup>৳</sup>300 <span>/Monthly</span></p>
+                      <p><sup>৳</sup>{p.price}<span>/Monthly</span></p>
                       <a href="#" className="btn">Order This Plan</a>
                     </div>
                   </div>
-                  <div className="col-lg-3 col-sm-6">
-                    <div className="single-package text-center" data-animate="fadeInUp" data-delay=".4">
-                      <span className="pupular-pack">Most popular package</span>
-                      <h4>Kids pack 2</h4>
-                      <hr />
-                      <ul className="list-unstyled">
-                        <li>Free installation</li>
-                        <li>Up to <span>25 Mpbs</span> download speed</li>
-                        <li>Unlimited data usages</li>
-                        <li><span>02 year</span> pricing lock guarantee</li>
-                        <li>Unlimited bandwidth</li>
-                      </ul>
-                      <p><sup>৳</sup>600<span>/Monthly</span></p>
-                      <a href="#" className="btn">Order This Plan</a>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-sm-6">
-                    <div className="single-package text-center" data-animate="fadeInUp" data-delay=".7">
-                      <h4>Kids pack 3</h4>
-                      <hr />
-                      <ul className="list-unstyled">
-                        <li>Free installation</li>
-                        <li>Up to <span>30 Mpbs</span> download speed</li>
-                        <li>Unlimited data usages</li>
-                        <li><span>03 year</span> pricing lock guarantee</li>
-                        <li>Unlimited bandwidth</li>
-                      </ul>
-                      <p><sup>৳</sup>1000 <span>/Monthly</span></p>
-                      <a href="#" className="btn">Order This Plan</a>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-sm-6">
-                    <div className="single-package text-center" data-animate="fadeInUp" data-delay={1}>
-                      <h4>Kids pack 4</h4>
-                      <hr />
-                      <ul className="list-unstyled">
-                        <li>Free installation</li>
-                        <li>Up to <span>39 Mpbs</span> download speed</li>
-                        <li>Unlimited data usages</li>
-                        <li><span>Unlimited</span> pricing lock guarantee</li>
-                        <li>Unlimited bandwidth</li>
-                      </ul>
-                      <p><sup>৳</sup>2000 <span>/Monthly</span></p>
-                      <a href="#" className="btn">Order This Plan</a>
-                    </div>
-                  </div>
-                </div>
+                 
+                
+              
+                      ))
+                }
+               </div>
                 {/* End of Packages */}
                 {/* Packages Includes */}
                 <div className="row justify-content-center">
