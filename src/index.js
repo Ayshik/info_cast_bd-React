@@ -13,6 +13,14 @@ import Corporate from './Pages/Corporate';
 import Contacts from './Pages/Contacts';
 import axios from 'axios';
 import Logout from './Pages/Logout';
+import Gamer_packages from './Pages/Gamer_packages';
+import Special_offers from './Pages/Special_offers';
+import Kids_packages from './Pages/Kids_packages';
+
+
+
+
+
 //localStorage.removeItem('user');
 var token=null;
 if(localStorage.getItem('user')){
@@ -50,6 +58,15 @@ ReactDOM.render(
             </Route>
             <Route exact path="/logout">
               <Logout/>
+            </Route>
+            <Route exact path="/Gamer_packages">
+              <Gamer_packages/>
+            </Route>
+            <Route exact path="/Special_offers">
+              <Special_offers/>
+            </Route>
+            <Route exact path="/Kids_packages">
+              <Kids_packages/>
             </Route>
         </Switch>
         <Footer/>
