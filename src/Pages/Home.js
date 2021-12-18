@@ -20,7 +20,7 @@ return(
             <div className="row align-items-center">
               <div className="col-xl-6 col-lg-8">
                 <div className="slide-content-inner">
-                  <h4 data-animate="fadeInUp" data-delay=".05">Best Internet Service Provider In USA</h4>
+                  <h4 data-animate="fadeInUp" data-delay=".05">Best Internet Service Provider In BD</h4>
                   <h2 data-animate="fadeInUp" data-delay=".3">Don’t Suffer The Buffer Speeds Up to 1 Gbps with Unlimited Data</h2>
                   <a data-animate="fadeInUp" data-delay=".6" href="#" className="btn">Learn More</a>
                 </div>
@@ -179,8 +179,8 @@ return(
               <li><span>01 year</span> pricing lock guarantee</li>
               <li>Unlimited bandwidth</li>
             </ul>
-            <p><sup>$</sup>12.50 <span>/Monthly</span></p>
-            <a href="#" className="btn">Order This Plan</a>
+            <p><sup>TK</sup>1200 <span>/Monthly</span></p>
+            <a href="#" className="btn">View More</a>
           </div>
         </div>
         <div className="col-lg-3 col-sm-6">
@@ -196,8 +196,8 @@ return(
               <li><span>02 year</span> pricing lock guarantee</li>
               <li>Unlimited bandwidth</li>
             </ul>
-            <p><sup>$</sup>24.50 <span>/Monthly</span></p>
-            <a href="#" className="btn">Order This Plan</a>
+            <p><sup>TK</sup>2400 <span>/Monthly</span></p>
+            <a href="#" className="btn">View More</a>
           </div>
         </div>
         <div className="col-lg-3 col-sm-6">
@@ -212,8 +212,8 @@ return(
               <li><span>03 year</span> pricing lock guarantee</li>
               <li>Unlimited bandwidth</li>
             </ul>
-            <p><sup>$</sup>49.50 <span>/Monthly</span></p>
-            <a href="#" className="btn">Order This Plan</a>
+            <p><sup>TK</sup>4900 <span>/Monthly</span></p>
+            <a href="#" className="btn">View More</a>
           </div>
         </div>
         <div className="col-lg-3 col-sm-6">
@@ -228,8 +228,8 @@ return(
               <li><span>Unlimited</span> pricing lock guarantee</li>
               <li>Unlimited bandwidth</li>
             </ul>
-            <p><sup>$</sup>79.50 <span>/Monthly</span></p>
-            <a href="#" className="btn">Order This Plan</a>
+            <p><sup>TK</sup>7999 <span>/Monthly</span></p>
+            <a href="#" className="btn">View More</a>
           </div>
         </div>
       </div>

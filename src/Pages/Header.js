@@ -1,10 +1,13 @@
 import React from 'react'
-
+import Login from './Login'
 import {Link} from 'react-router-dom';
 
 function Header() {
     return (
         <div>
+
+
+         
              {/* Preloader */}
   <div className="preLoader" />
   {/* Main header */}
@@ -26,10 +29,13 @@ function Header() {
               <div className="client-area position-relative">
                 <span id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account <i className="fa fa-caret-down" /></span>
                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                  < Link to="/" className="dropdown-item">Sign In</Link>
-                  <a href="/" className="dropdown-item">Sign Up</a>
+                  < button type="button" className="dropdown-item" data-toggle="modal" data-target="#loginModal">Login
+      </button>
+      < button type="button" className="dropdown-item" data-toggle="modal" data-target="#loginModal">Signup
+      </button>
                 </div>
               </div>
+             
             </div>
           </div>
         </div>
@@ -90,7 +96,7 @@ function Header() {
                      
                       <li><a href="/">Bill Pay</a></li>
                       <li><a href="/">About Us</a></li>
-                      <li><a href="/">Contact Us</a></li>
+                      <li><a href="/Contacts">Contact Us</a></li>
                       <li><a href="/">Support</a></li>
                       <li><a href="/">Special Offers</a></li>
                     </ul>
@@ -112,6 +118,7 @@ function Header() {
       </div>
     </div>
   </header>
+<Login/>
   {/* End of Main header */}
         </div>
     )

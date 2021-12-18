@@ -10,6 +10,17 @@ import All_service from './Pages/All_service';
 import Cable_tv from './Pages/Cable_tv';
 import Dedicated_server from './Pages/Dedicated_server';
 import Corporate from './Pages/Corporate';
+import Contacts from './Pages/Contacts';
+import axios from 'axios';
+import Logout from './Pages/Logout';
+//localStorage.removeItem('user');
+var token=null;
+if(localStorage.getItem('user')){
+  var obj = JSON.parse(localStorage.getItem('user'));
+  token = obj.access_token;
+}
+axios.defaults.baseURL="http://localhost:8000/";
+axios.defaults.headers.common["Authorization"] = token;
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,6 +44,12 @@ ReactDOM.render(
             </Route>
             <Route exact path="/Corporate">
               <Corporate/>
+            </Route>
+            <Route exact path="/Contacts">
+              <Contacts/>
+            </Route>
+            <Route exact path="/logout">
+              <Logout/>
             </Route>
         </Switch>
         <Footer/>

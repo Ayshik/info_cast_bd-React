@@ -5,7 +5,7 @@ export class Corporate extends Component {
         return (
             <div>
                  {/* Page Title */}
-        <section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
+        <section className="page-title-wrap" data-bg-img="assets/img/hills.jpg" data-rjs={2}>
           <div className="container">
             <div className="row">
               <div className="col">
