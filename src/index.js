@@ -24,14 +24,14 @@ axios.defaults.headers.common["Authorization"] = token;
 
 ReactDOM.render(
   <React.StrictMode>
-    
+
     <Router>
         <Header/>
         <Switch>
             <Route exact path="/">
               <Home/>
             </Route>
-           
+
             <Route exact path="/All-Service">
               <All_service/>
             </Route>
