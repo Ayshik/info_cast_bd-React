@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header';
+import Footer from './Footer'
 
 function Brands() {
     return (
         <div>
+          <Header/>
             {/* Subscription */}
   <section className="pb-120">
     <div className="container">
@@ -42,6 +45,7 @@ function Brands() {
         </div>
       </div>
     </div>
+    <Footer/>
   </section>
   {/* End of Brands */}
         </div>

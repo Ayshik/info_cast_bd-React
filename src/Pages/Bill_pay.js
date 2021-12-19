@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from './Header';
+import Footer from './Footer'
 const Bill_pay=()=>{
   return(
     <div>
+      <Header/>
     <p>{/* Page Title */}
     </p><section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
       <div className="container">
@@ -232,6 +234,7 @@ const Bill_pay=()=>{
           </div>
         </form>
       </div>
+      <Footer/>
     </section>
     {/* End of Checkout */}<p />
   </div>

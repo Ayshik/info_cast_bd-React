@@ -1,9 +1,11 @@
 import React from 'react'
 import Clint from './Clint'
-
+import Header from './Header';
+import Footer from './Footer'
 const Cable_tv=()=>{
         return (
             <div>
+              <Header/>
                  {/* Page Title */}
         <section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
           <div className="container">
@@ -192,6 +194,7 @@ const Cable_tv=()=>{
               </div>
             </div>
           </div>
+          <Footer/>
         </section>
         {/* End of Channels */}
         <Clint/>

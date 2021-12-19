@@ -1,9 +1,11 @@
 import React from 'react'
 import Clint from './Clint'
-
+import Header from './Header';
+import Footer from './Footer'
 const All_service=()=>{
     return(
             <div>
+              <Header/>
                  {/* Page Title */}
         <section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
           <div className="container">
@@ -197,6 +199,7 @@ const All_service=()=>{
               </div>
             </div>
           </div>
+          <Footer/>
         </section>
         {/* End of FAQ */}
         <Clint/>

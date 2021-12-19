@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import Header from './Header';
+import Footer from './Footer'
 
 export class Contacts extends Component {
     render() {
         return (
             <div>
+              <Header/>
                  {/* Page Title */}
       <section className="page-title-wrap" data-bg-img="assets/img/hills.jpg" data-rjs={2}>
         <div className="container">
@@ -100,6 +103,7 @@ export class Contacts extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </section>
       {/* End of Contacts */} 
             </div>

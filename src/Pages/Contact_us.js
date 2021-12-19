@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from './Header';
+import Footer from './Footer'
 
 const Contact_us=()=>{
   return(
      <div>
+
+<Header/>
 <p>{/* Page Title */}
         </p><section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
           <div className="container">
@@ -99,6 +103,7 @@ const Contact_us=()=>{
               </div>
             </div>
           </div>
+          <Footer/>
         </section>
         {/* End of Contacts */}<p />
       </div>

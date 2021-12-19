@@ -36,6 +36,7 @@ if(localStorage.getItem('user')){
 axios.defaults.baseURL="http://localhost:8000/";
 axios.defaults.headers.common["Authorization"] = token;
 
+
 ReactDOM.render(
   <React.StrictMode>
 
@@ -43,7 +44,6 @@ ReactDOM.render(
     <Route exact path="/Admin_dashboard">
               <Admin_dashboard/>
             </Route>
-        <Header/>
         <Switch>
             <Route exact path="/">
               <Home/>
@@ -90,7 +90,6 @@ ReactDOM.render(
               <Contact_us/>
             </Route>
         </Switch>
-        <Footer/>
     </Router>
     
      

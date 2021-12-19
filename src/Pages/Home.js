@@ -3,11 +3,13 @@ import React from 'react'
 import Brands from './Brands'
 import Clint from './Clint'
 import Header from './Header'
+import Footer from './Footer'
 
 const Home=()=>{
 return(
 
   <div>
+    <Header/>
   {/* <Header status="active"/> */}
   {/* Banner */}
   <section>
@@ -611,6 +613,7 @@ return(
         </div>
       </div>
     </div>
+    <Footer/>
   </section>
   {/* End of Product Carousel */}
   <Brands/>
