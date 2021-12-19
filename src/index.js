@@ -16,7 +16,7 @@ import Logout from './Pages/Logout';
 import Gamer_packages from './Pages/Gamer_packages';
 import Special_offers from './Pages/Special_offers';
 import Kids_packages from './Pages/Kids_packages';
-
+import Student_packages from './Pages/Student_packages';
 
 
 
@@ -67,6 +67,9 @@ ReactDOM.render(
             </Route>
             <Route exact path="/Kids_packages">
               <Kids_packages/>
+            </Route>
+            <Route exact path="/Student_packages">
+              <Student_packages/>
             </Route>
         </Switch>
         <Footer/>
