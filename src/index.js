@@ -17,6 +17,7 @@ import Gamer_packages from './Pages/Gamer_packages';
 import Special_offers from './Pages/Special_offers';
 import Kids_packages from './Pages/Kids_packages';
 import Student_packages from './Pages/Student_packages';
+import Admin_dashboard from './Pages/Admin_dashboard';
 
 
 
@@ -34,6 +35,9 @@ ReactDOM.render(
   <React.StrictMode>
 
     <Router>
+    <Route exact path="/Admin_dashboard">
+              <Admin_dashboard/>
+            </Route>
         <Header/>
         <Switch>
             <Route exact path="/">
@@ -74,6 +78,8 @@ ReactDOM.render(
         </Switch>
         <Footer/>
     </Router>
+    
+     
   </React.StrictMode>,
   document.getElementById('root')
 );
