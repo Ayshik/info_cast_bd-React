@@ -49,7 +49,7 @@ const Kids_packages=()=>{
                         <li>Unlimited bandwidth</li>
                       </ul>
                       <p><sup>৳</sup>{p.price}<span>/Monthly</span></p>
-                      <a href="#" className="btn">Order This Plan</a>
+                      <a href="/" className="btn">Order This Plan</a>
                     </div>
                   </div>
                  

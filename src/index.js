@@ -18,6 +18,11 @@ import Special_offers from './Pages/Special_offers';
 import Kids_packages from './Pages/Kids_packages';
 import Student_packages from './Pages/Student_packages';
 import Admin_dashboard from './Pages/Admin_dashboard';
+import About_us from './Pages/About_us';
+import Bill_pay from './Pages/Bill_pay';
+import Contact_us from './Pages/Contact_us';
+
+
 
 
 
@@ -74,6 +79,15 @@ ReactDOM.render(
             </Route>
             <Route exact path="/Student_packages">
               <Student_packages/>
+            </Route>
+            <Route exact path="/About_us">
+              <About_us/>
+            </Route>
+            <Route exact path="/Bill_pay">
+              <Bill_pay/>
+            </Route>
+            <Route exact path="/Contact_us">
+              <Contact_us/>
             </Route>
         </Switch>
         <Footer/>
