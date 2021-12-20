@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer'
 const Special_offers=()=>{
@@ -46,7 +47,7 @@ const Special_offers=()=>{
                         <li>Unlimited bandwidth</li>
                       </ul>
                       <p><sup>৳</sup>{p.price}<span>/Monthly</span></p>
-                      <a href="#" className="btn">Order This Plan</a>
+                      <Link to={`/Request/${p.name}/${p.price}`} style={{color: "white"}}className="btn">Order This Plan</Link>
                     </div>
                   </div>
                   ))

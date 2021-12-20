@@ -54,7 +54,7 @@ const Kids_packages=()=>{
                       </ul>
 
                       <p><sup>৳</sup>{p.price}<span>/Monthly</span></p>
-                       <Link to={`/Request/${p.name}/${p.price}`} className="btn">Order This Plan</Link>
+                       <Link to={`/Request/${p.name}/${p.price}`} style={{color: "white"}}className="btn">Order This Plan</Link>
                     </div>
                   </div>
                  

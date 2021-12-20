@@ -3,9 +3,10 @@ import axios from 'axios';
 import {useParams} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import Header from './Header';
-import Footer from './Footer'
+
+//import Header from './Header';
+//import Footer from './Footer'
 
 const Request=()=>{
         const {pname} = useParams();
@@ -73,9 +74,8 @@ const Request=()=>{
        
         return (
             <div>
-                  <Header/>
-            <p>{/* Page Title */}
-            </p><section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
+                  
+            <section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
               <div className="container">
                 <div className="row">
                   <div className="col">
@@ -187,7 +187,7 @@ const Request=()=>{
                           <div className="payment-method">
                            
                            
-                            <center><button type="button" onClick={Submit} className="btn">Place Order</button></center>
+                            <center><button type="button" onClick={Submit} style={{color: "white"}} className="btn">Place Order</button></center>
                           </div>
                         </div>
                       </div>
@@ -199,7 +199,7 @@ const Request=()=>{
             </section>
             {/* End of Checkout */}<p />
             <ToastContainer />
-            <Footer/>
+           
           </div>
         )
     }
