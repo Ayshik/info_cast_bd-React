@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 import Header from './Header';
 import Footer from './Footer'
 
@@ -50,8 +52,9 @@ const Kids_packages=()=>{
                         <li><span>{p.pricinglock}</span> pricing lock guarantee</li>
                         <li>Unlimited bandwidth</li>
                       </ul>
+
                       <p><sup>৳</sup>{p.price}<span>/Monthly</span></p>
-                      <a href="/" className="btn">Order This Plan</a>
+                       <Link to={`/Request/${p.name}/${p.price}`} className="btn">Order This Plan</Link>
                     </div>
                   </div>
                  

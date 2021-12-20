@@ -181,12 +181,12 @@ export class Corporate extends Component {
                 </div>
               </div>
             </div>
-            <Footer/>
+           
             {/* End of Packages Includes */}
           </div>
         </section>
         {/* End of Packages Wrap */}
-       
+        <Footer/>
             </div>
             
         )

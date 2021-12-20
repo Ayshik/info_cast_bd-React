@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Pages/Header';
-import Footer from './Pages/Footer';
+
 import Home from './Pages/Home';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+
 import All_service from './Pages/All_service';
 import Cable_tv from './Pages/Cable_tv';
 import Dedicated_server from './Pages/Dedicated_server';
@@ -21,7 +21,7 @@ import Admin_dashboard from './Pages/Admin_dashboard';
 import About_us from './Pages/About_us';
 import Bill_pay from './Pages/Bill_pay';
 import Contact_us from './Pages/Contact_us';
-
+import Request from './Pages/Request';
 
 
 
@@ -41,10 +41,13 @@ ReactDOM.render(
   <React.StrictMode>
 
     <Router>
-    <Route exact path="/Admin_dashboard">
+    
+        <Switch>
+
+        <Route exact path="/Admin_dashboard">
               <Admin_dashboard/>
             </Route>
-        <Switch>
+            
             <Route exact path="/">
               <Home/>
             </Route>
@@ -89,8 +92,15 @@ ReactDOM.render(
             <Route exact path="/Contact_us">
               <Contact_us/>
             </Route>
+            <Route exact path="/Request/:pname/:price">
+              <Request/>
+            </Route>
+           
         </Switch>
     </Router>
+
+
+
     
      
   </React.StrictMode>,
