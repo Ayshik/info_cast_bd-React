@@ -1,7 +1,9 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import Request from './Request';
+
+import Header from './Header';
+import Footer from './Footer'
 
 const Kids_packages=()=>{
   const [products, setProducts] = useState([]);
@@ -18,6 +20,7 @@ const Kids_packages=()=>{
     },[]);
   return(
     <div>
+      <Header/>
     <p>{/* Packages Wrap */}
             </p><section className="pt-120 pb-55">
               <div className="container">
@@ -138,6 +141,7 @@ const Kids_packages=()=>{
                     </div>
                   </div>
                 </div>
+                <Footer/>
                 {/* End of Packages Includes */}
               </div>
             </section>

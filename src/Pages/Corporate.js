@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import Footer from './Footer'
+import Header from './Header';
 export class Corporate extends Component {
     render() {
         return (
             <div>
+              <Header/>
+              
                  {/* Page Title */}
         <section className="page-title-wrap" data-bg-img="assets/img/hills.jpg" data-rjs={2}>
           <div className="container">
@@ -178,12 +181,14 @@ export class Corporate extends Component {
                 </div>
               </div>
             </div>
+            <Footer/>
             {/* End of Packages Includes */}
           </div>
         </section>
         {/* End of Packages Wrap */}
        
             </div>
+            
         )
     }
 }

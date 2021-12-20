@@ -1,10 +1,13 @@
 import React from 'react'
 import Clint from './Clint';
 import Brands from './Brands';
+import Header from './Header';
+import Footer from './Footer';
 const About_us=()=>{
   return(
      
 <div>
+  <Header/>
         <p>{/* Page Title */}
         </p><section className="page-title-wrap" data-bg-img="assets/img/hills.jpg" data-rjs={2}>
           <div className="container">
@@ -97,6 +100,7 @@ const About_us=()=>{
               </div>
             </div>
           </div>
+          <Footer/>
         </section>
         {/* End of Abut Us */}<p />
         <Clint/>

@@ -1,11 +1,13 @@
 import React  from 'react'
 import Clint from './Clint'
 import Brands from './Brands'
-
+import Header from './Header';
+import Footer from './Footer'
 const Dedicated_server=()=>{
     
         return (
             <div>
+              <Header/>
                 {/* Page Title */}
         <section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
           <div className="container">
@@ -207,6 +209,7 @@ const Dedicated_server=()=>{
               </div>
             </div>
           </div>
+          <Footer/>
         </section>
         {/* End of Packages */}
        <div><Clint/></div> 

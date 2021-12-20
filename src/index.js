@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Pages/Header';
-import Footer from './Pages/Footer';
+
 import Home from './Pages/Home';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
@@ -18,6 +17,7 @@ import Gamer_packages from './Pages/Gamer_packages';
 import Special_offers from './Pages/Special_offers';
 import Kids_packages from './Pages/Kids_packages';
 import Student_packages from './Pages/Student_packages';
+import Admin_dashboard from './Pages/Admin_dashboard';
 import About_us from './Pages/About_us';
 import Bill_pay from './Pages/Bill_pay';
 import Contact_us from './Pages/Contact_us';
@@ -36,11 +36,14 @@ if(localStorage.getItem('user')){
 axios.defaults.baseURL="http://localhost:8000/";
 axios.defaults.headers.common["Authorization"] = token;
 
+
 ReactDOM.render(
   <React.StrictMode>
 
     <Router>
-        <Header/>
+    <Route exact path="/Admin_dashboard">
+              <Admin_dashboard/>
+            </Route>
         <Switch>
             <Route exact path="/">
               <Home/>
@@ -91,11 +94,12 @@ ReactDOM.render(
             </Route>
            
         </Switch>
-        <Footer/>
     </Router>
 
 
 
+    
+     
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
-
+import Header from './Header';
+import Footer from './Footer'
 const Student_packages=()=>{
   const [products, setProducts] = useState([]);
       
@@ -16,6 +17,7 @@ const Student_packages=()=>{
       },[]);
   return(
     <div>
+      <Header/>
     <p>{/* Packages Wrap */}
             </p><section className="pt-120 pb-55">
               <div className="container">
@@ -127,6 +129,7 @@ const Student_packages=()=>{
                     </div>
                   </div>
                 </div>
+                <Footer/>
                 {/* End of Packages Includes */}
               </div>
             </section>

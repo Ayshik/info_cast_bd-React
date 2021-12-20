@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from './Header';
+import Footer from './Footer'
 const Clint=()=>{
   return(
       <div>
+        <Header/>
          <section className="theme-bg-overlay bg-img-xs-none pt-120 pb-120" data-bg-img="img/earth.jpg" data-rjs={2}>
     <div className="container">
       <div className="row justify-content-center">
@@ -121,6 +123,7 @@ const Clint=()=>{
         </div>
       </div>
     </div>
+    <Footer/>
   </section>
       </div>
     )
