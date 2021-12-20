@@ -9,7 +9,7 @@ const Login = ()=>{
     let [name,setName] = useState("");
     let [password,setPass] = useState("");
    
-   
+  
 
     const loginSubmit=()=>{    
         //alert(name+" "+password);
@@ -18,18 +18,21 @@ const Login = ()=>{
         .then(resp=>{
             var token = resp.data;
             var user = {email: token.email,access_token:token.token,type:token.type};
+            var check= {isLoggedIn:"true"};
             localStorage.setItem('user',JSON.stringify(user));
+            localStorage.setItem('check',JSON.stringify(check));
             console.log(localStorage.getItem('user'));
             if(user.type=="admin"){
+             
             window.location.href ='/Admin_dashboard';
             }
             else if(user.type=="customer"){
-
+            
               window.location.href ='/User_dashboard';
 
             }
             else if(user.type=="moderator"){
-
+            
               window.location.href ='/Moderator_dashboard';
 
             }

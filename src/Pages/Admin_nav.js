@@ -1,7 +1,25 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+
+import { Redirect } from "react-router-dom";
 
 export class Admin_nav extends Component {
+    state = {
+        navigate: false,
+      };
+    
+      onLogoutHandler = () => {
+        localStorage.clear();
+        this.setState({
+          navigate: true,
+        });
+      };
     render() {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const check = JSON.parse(localStorage.getItem("check"));
+      
+        if (check.isLoggedIn=="false") {
+          return <Redirect to="/" />;
+        }
         return (
             <div>
             <nav className="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
@@ -24,7 +42,7 @@ export class Admin_nav extends Component {
                   <li className="nav-item d-flex align-items-center">
                     <a href="javascript:;" className="nav-link text-body font-weight-bold px-0">
                       <i className="fa fa-user me-sm-1" />
-                      <span className="d-sm-inline d-none">Sign In</span>
+                      <span className="d-sm-inline d-none">{user.email}</span>
                     </a>
                   </li>
                   <li className="nav-item d-xl-none ps-3 d-flex align-items-center">
