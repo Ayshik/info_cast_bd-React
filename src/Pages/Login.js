@@ -25,12 +25,12 @@ const Login = ()=>{
             }
             else if(user.type=="customer"){
 
-              window.location.href ='/All-Service';
+              window.location.href ='/User_dashboard';
 
             }
             else if(user.type=="moderator"){
 
-              window.location.href ='/Logout';
+              window.location.href ='/Moderator_dashboard';
 
             }
             else{

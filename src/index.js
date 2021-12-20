@@ -22,7 +22,9 @@ import About_us from './Pages/About_us';
 import Bill_pay from './Pages/Bill_pay';
 import Contact_us from './Pages/Contact_us';
 import Request from './Pages/Request';
-
+import User_dashboard from './Pages/User_dashboard';
+import Moderator_dashboard from './Pages/Moderator_dashboard';
+import Admin_LC from './Pages/Admin_LC';
 
 
 
@@ -46,6 +48,15 @@ ReactDOM.render(
 
         <Route exact path="/Admin_dashboard">
               <Admin_dashboard/>
+            </Route>
+            <Route exact path="/Admin_LC">
+              <Admin_LC/>
+            </Route>
+            <Route exact path="/User_dashboard">
+              <User_dashboard/>
+            </Route>
+            <Route exact path="/Moderator_dashboard">
+              <Moderator_dashboard/>
             </Route>
             
             <Route exact path="/">
