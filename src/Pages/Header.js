@@ -31,8 +31,7 @@ function Header() {
                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                   < button type="button" className="dropdown-item" data-toggle="modal" data-target="#loginModal">Login
       </button>
-      < button type="button" className="dropdown-item" data-toggle="modal" data-target="#loginModal">Signup
-      </button>
+     
                 </div>
               </div>
 

@@ -1,27 +1,51 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
-import { Redirect } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ()=>{
     let [token,setToken] = useState("");
     let [name,setName] = useState("");
     let [password,setPass] = useState("");
-    let history=useHistory();
+   
+   
+
     const loginSubmit=()=>{    
         //alert(name+" "+password);
         var obj = {email:name, password:password};
         axios.post("http://127.0.0.1:8000/api/login",obj)
         .then(resp=>{
             var token = resp.data;
-            var user = {email: token.email,access_token:token.token};
+            var user = {email: token.email,access_token:token.token,type:token.type};
             localStorage.setItem('user',JSON.stringify(user));
             console.log(localStorage.getItem('user'));
-            window.location.href ='/All-service';
-            //return <Redirect to="/All-service" />;
-          // history.push("/All-service");
-            //console.log(resp.data);
-            //setPosts(resp.data);
+            if(user.type=="admin"){
+            window.location.href ='/Admin_dashboard';
+            }
+            else if(user.type=="customer"){
+
+              window.location.href ='/All-Service';
+
+            }
+            else if(user.type=="moderator"){
+
+              window.location.href ='/Logout';
+
+            }
+            else{
+
+              toast.error('Please check your username Password', {
+                position: "top-center",
+                autoClose: 5000,
+               
+                closeOnClick: true,
+               
+               
+               
+                });
+            }
+           
         }).catch(err=>{
             console.log(err);
         }); 
@@ -76,6 +100,7 @@ const Login = ()=>{
                 </div>
               </div>
             </div>
+            <ToastContainer />
           </div>
         )
     }

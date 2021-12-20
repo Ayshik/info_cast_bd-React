@@ -41,10 +41,13 @@ ReactDOM.render(
   <React.StrictMode>
 
     <Router>
-    <Route exact path="/Admin_dashboard">
+    
+        <Switch>
+
+        <Route exact path="/Admin_dashboard">
               <Admin_dashboard/>
             </Route>
-        <Switch>
+            
             <Route exact path="/">
               <Home/>
             </Route>
