@@ -25,6 +25,11 @@ import Request from './Pages/Request';
 import User_dashboard from './Pages/User_dashboard';
 import Moderator_dashboard from './Pages/Moderator_dashboard';
 import Admin_LC from './Pages/Admin_LC';
+import Admin_AC from './Pages/Admin_AC';
+import Admin_VC from './Pages/Admin_VC';
+import Admin_PP from './Pages/Admin_PP';
+import Admin_PL from './Pages/Admin_PL';
+import Admin_AP from './Pages/Admin_AP';
 
 
 
@@ -51,6 +56,21 @@ ReactDOM.render(
             </Route>
             <Route exact path="/Admin_LC">
               <Admin_LC/>
+            </Route>
+            <Route exact path="/Admin_AC">
+              <Admin_AC/>
+            </Route>
+            <Route exact path="/Admin_VC">
+              <Admin_VC/>
+            </Route>
+            <Route exact path="/Admin_PP">
+              <Admin_PP/>
+            </Route>
+            <Route exact path="/Admin_PL">
+              <Admin_PL/>
+            </Route>
+            <Route exact path="/Admin_AP">
+              <Admin_AP/>
             </Route>
             <Route exact path="/User_dashboard">
               <User_dashboard/>
