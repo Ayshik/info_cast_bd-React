@@ -199,10 +199,11 @@ const All_service=()=>{
               </div>
             </div>
           </div>
-          <Footer/>
+         
         </section>
         {/* End of FAQ */}
         <Clint/>
+        <Footer/>
             </div>
         )
     }

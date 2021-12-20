@@ -3,6 +3,10 @@ import axios from 'axios';
 import {useParams} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import Header from './Header';
+import Footer from './Footer'
+
 const Request=()=>{
         const {pname} = useParams();
         const {price} = useParams();
@@ -69,6 +73,7 @@ const Request=()=>{
        
         return (
             <div>
+                  <Header/>
             <p>{/* Page Title */}
             </p><section className="page-title-wrap" data-bg-img="img/hills.jpg" data-rjs={2}>
               <div className="container">
@@ -194,6 +199,7 @@ const Request=()=>{
             </section>
             {/* End of Checkout */}<p />
             <ToastContainer />
+            <Footer/>
           </div>
         )
     }

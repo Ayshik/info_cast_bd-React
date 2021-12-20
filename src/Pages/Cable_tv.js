@@ -194,10 +194,11 @@ const Cable_tv=()=>{
               </div>
             </div>
           </div>
-          <Footer/>
+         
         </section>
         {/* End of Channels */}
         <Clint/>
+        <Footer/>
             </div>
         )
     }
