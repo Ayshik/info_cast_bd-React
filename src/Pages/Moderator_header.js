@@ -23,7 +23,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/tables.html">
+                <a className="nav-link text-white " href="/Mod_AP">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">table_view</i>
                   </div>
@@ -31,7 +31,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/billing.html">
+                <a className="nav-link text-white " href="/Mod_LC">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">receipt_long</i>
                   </div>
@@ -39,7 +39,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/billing.html">
+                <a className="nav-link text-white " href="/Mod_AC">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">receipt_long</i>
                   </div>
@@ -47,7 +47,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/virtual-reality.html">
+                <a className="nav-link text-white " href="/Mod_VC">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">view_in_ar</i>
                   </div>
@@ -55,7 +55,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/rtl.html">
+                <a className="nav-link text-white " href="/Mod_PP">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">format_textdirection_r_to_l</i>
                   </div>
@@ -63,7 +63,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/notifications.html">
+                <a className="nav-link text-white " href="/Mod_PL">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">notifications</i>
                   </div>

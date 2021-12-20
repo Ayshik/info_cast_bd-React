@@ -25,6 +25,20 @@ import Request from './Pages/Request';
 import User_dashboard from './Pages/User_dashboard';
 import Moderator_dashboard from './Pages/Moderator_dashboard';
 import Admin_LC from './Pages/Admin_LC';
+import Admin_AC from './Pages/Admin_AC';
+import Admin_VC from './Pages/Admin_VC';
+import Admin_PP from './Pages/Admin_PP';
+import Admin_PL from './Pages/Admin_PL';
+import Admin_AP from './Pages/Admin_AP';
+import Mod_LC from './Pages/Mod_LC';
+import Mod_AC from './Pages/Mod_AC';
+import Mod_VC from './Pages/Mod_VC';
+import Mod_PP from './Pages/Mod_PP';
+import Mod_PL from './Pages/Mod_PL';
+import Mod_AP from './Pages/Mod_AP';
+
+
+
 
 
 
@@ -52,6 +66,23 @@ ReactDOM.render(
             <Route exact path="/Admin_LC">
               <Admin_LC/>
             </Route>
+            <Route exact path="/Admin_AC">
+              <Admin_AC/>
+            </Route>
+            <Route exact path="/Admin_VC">
+              <Admin_VC/>
+            </Route>
+            <Route exact path="/Admin_PP">
+              <Admin_PP/>
+            </Route>
+            <Route exact path="/Admin_PL">
+              <Admin_PL/>
+            </Route>
+
+            <Route exact path="/Admin_AP">
+              <Admin_AP/>
+            </Route>
+            
             <Route exact path="/User_dashboard">
               <User_dashboard/>
             </Route>
@@ -59,6 +90,30 @@ ReactDOM.render(
               <Moderator_dashboard/>
             </Route>
             
+            <Route exact path="/Mod_LC">
+              <Mod_LC/>
+            </Route>
+
+            <Route exact path="/Mod_AC">
+              <Mod_AC/>
+            </Route>
+
+            <Route exact path="/Mod_VC">
+              <Mod_VC/>
+            </Route>
+
+            <Route exact path="/Mod_PP">
+              <Mod_PP/>
+            </Route>
+
+            <Route exact path="/Mod_PL">
+              <Mod_PL/>
+            </Route>
+
+            <Route exact path="/Mod_AP">
+              <Mod_AP/>
+            </Route>
+
             <Route exact path="/">
               <Home/>
             </Route>
