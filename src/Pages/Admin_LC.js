@@ -6,7 +6,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import {Link, useHistory} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import swal from 'sweetalert';
+
 const Admin_LC=()=>{
 
   
