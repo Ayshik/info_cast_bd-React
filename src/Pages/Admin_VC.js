@@ -60,7 +60,7 @@ return(
               <div className="card my-4">
                 <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                   <div className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                    <h6 className="text-white text-capitalize ps-3">Active Customer table</h6>
+                    <h6 className="text-white text-capitalize ps-3">Inactive Customer table</h6>
                   </div>
                 </div>
                 <div className="card-body px-0 pb-2">

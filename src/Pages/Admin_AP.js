@@ -1,6 +1,58 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
+import axios from 'axios';
+import {useParams} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Admin_AP=()=>{
+
+  let [name,setName] = useState("");
+  let [speed,setSpeed] = useState("");
+  let [pricinglock,setPricinglock] = useState("");
+  let [price,setPrice] = useState("");
+  let [category,setCategory] = useState("");
+
+
+  const Add =()=>{    
+           
+    var obj = {name:name, speed:speed,pricinglock:pricinglock,price:price,category:category};
+    axios.post("http://127.0.0.1:8000/api/Addpackages",obj)
+    
+
+    .then(resp=>{
+        var massage = resp.data;
+        console.log(massage);
+        if(massage=="Successful")
+        {
+        toast.success('🦄 Package Added', {
+            position: "top-center",
+            autoClose: 5000,
+           
+            closeOnClick: true,
+           
+           
+           
+            });
+       
+        
+        }
+        else{
+            toast.error('please Fill all the fields', {
+                position: "top-center",
+                autoClose: 5000,
+               
+                closeOnClick: true,
+               
+               
+               
+                });
+        }
+    }).catch(err=>{
+        console.log(err);
+    }); 
+   
+}
+
 return(
 <div>
 
@@ -24,29 +76,14 @@ return(
                   <div className="collapse navbar-collapse" id="navigation">
                     <ul className="navbar-nav mx-auto">
                       <li className="nav-item">
-                        <a className="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../pages/dashboard.html">
+                        <a className="nav-link d-flex align-items-center me-2 active" aria-current="page" href="/Admin_dashboard">
                           <i className="fa fa-chart-pie opacity-6 text-dark me-1" />
                           Dashboard
                         </a>
                       </li>
-                      <li className="nav-item">
-                        <a className="nav-link me-2" href="../pages/profile.html">
-                          <i className="fa fa-user opacity-6 text-dark me-1" />
-                          Profile
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link me-2" href="../pages/sign-up.html">
-                          <i className="fas fa-user-circle opacity-6 text-dark me-1" />
-                          Sign Up
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link me-2" href="../pages/sign-in.html">
-                          <i className="fas fa-key opacity-6 text-dark me-1" />
-                          Sign In
-                        </a>
-                      </li>
+                     
+                      
+                      
                     </ul>
                     <ul className="navbar-nav d-lg-block d-none">
                       <li className="nav-item">
@@ -66,7 +103,7 @@ return(
               <div className="container">
                 <div className="row">
                   <div className="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
-                    <div className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style={{backgroundImage: 'url("../assets/img/illustrations/illustration-signup.jpg")', backgroundSize: 'cover'}}>
+                    <div className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style={{backgroundImage: 'url("assets/Dashboard/img/illustrations/illustration-signup.jpg")', backgroundSize: 'cover'}}>
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
@@ -77,25 +114,37 @@ return(
                       <div className="card-body">
                         <form role="form">
                           <div className="input-group input-group-outline mb-3">
-                            <label className="form-label">Name</label>
-                            <input type="text" className="form-control" />
+                            <label className="form-label"></label>
+                            <input type="text" placeholder='Name' value={name} onChange={(e)=>setName(e.target.value)} className="form-control" />
                           </div>
                           <div className="input-group input-group-outline mb-3">
-                            <label className="form-label">Email</label>
-                            <input type="email" className="form-control" />
+                            <label className="form-label"></label>
+                            <input type="text" placeholder='Speed' value={speed} onChange={(e)=>setSpeed(e.target.value)} className="form-control" />
                           </div>
                           <div className="input-group input-group-outline mb-3">
-                            <label className="form-label">Password</label>
-                            <input type="password" className="form-control" />
+                            <label className="form-label"></label>
+                            <input type="text"placeholder='Pricing Lock' value={pricinglock} onChange={(e)=>setPricinglock(e.target.value)} className="form-control" />
+                          </div>
+                          <div className="input-group input-group-outline mb-3">
+                            <label className="form-label"></label>
+                            <input type="text" placeholder='Price' value={price} onChange={(e)=>setPrice(e.target.value)} className="form-control" />
+                          </div>
+                          <div className="input-group input-group-outline mb-3">
+                            <label className="form-label"></label>
+                            <input type="text" placeholder='Category' value={category} onChange={(e)=>setCategory(e.target.value)} className="form-control" />
                           </div>
                           
                           <div className="text-center">
-                            <button type="button" className="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign Up</button>
+                            <button type="button"  onClick={Add} className="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Add Package</button>
                           </div>
                         </form>
                       </div>
                       <p />
-                    </div></div></div></div></div></section></main></div>
+                    </div></div></div></div></div></section></main>
+                    <ToastContainer />
+                    </div>
+                    
+                    
 
 )
 }
