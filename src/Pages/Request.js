@@ -28,7 +28,7 @@ const Request=()=>{
        
         const Submit=()=>{    
            
-            var obj = {name:name, company:company,email:email,phone:phone,country:"Bangladesh",address:address,city:city,state:state,postcode:postcode,packagename:pname,packageprice:price,totalprice:z,lstatus:"pending"};
+            var obj = {name:name, company:company,email:email,phone:phone,country:"Bangladesh",address:address,city:city,state:state,postcode:postcode,packagename:pname,packageprice:price,totalprice:z,status:"pending"};
             axios.post("http://localhost:8000/api/Requestpack",obj)
             
 
