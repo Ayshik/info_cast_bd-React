@@ -36,7 +36,7 @@ const Admin_AP=()=>{
        
         
         }
-        else{
+        else if(massage!="Successful") {
             toast.error('please Fill all the fields', {
                 position: "top-center",
                 autoClose: 5000,

@@ -36,7 +36,9 @@ import Mod_VC from './Pages/Mod_VC';
 import Mod_PP from './Pages/Mod_PP';
 import Mod_PL from './Pages/Mod_PL';
 import Mod_AP from './Pages/Mod_AP';
-
+import Add_modaretor from './Pages/Add_modaretor';
+import Package_details from './Pages/Package_details';
+import Modarator_info from './Pages/Modarator_info';
 
 
 
@@ -161,7 +163,15 @@ ReactDOM.render(
             <Route exact path="/Request/:pname/:price">
               <Request/>
             </Route>
-           
+            <Route exact path="/Add_modarator">
+              <Add_modaretor/>
+            </Route>
+            <Route exact path="/Package_details">
+              <Package_details/>
+            </Route>
+            <Route exact path="/Modarator_info">
+              <Modarator_info/>
+            </Route>
         </Switch>
     </Router>
 
