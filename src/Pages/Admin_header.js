@@ -37,7 +37,7 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">receipt_long</i>
                   </div>
-                  <span className="nav-link-text ms-1">Line Connections</span>
+                  <span className="nav-link-text ms-1">Active Connections</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -53,7 +53,7 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">view_in_ar</i>
                   </div>
-                  <span className="nav-link-text ms-1">View Customers</span>
+                  <span className="nav-link-text ms-1">Inactive Customers</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -69,7 +69,7 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">notifications</i>
                   </div>
-                  <span className="nav-link-text ms-1">Payment List</span>
+                  <span className="nav-link-text ms-1">Customer Request</span>
                 </a>
               </li>
               <li className="nav-item mt-3">
