@@ -120,7 +120,11 @@ return(
                           } */}
                          
 
-                          <td className="align-middle">
+                         
+                          <td>
+                        <Link to={`Admin_UP/${p.id}`} className="btn btn-danger btn-sm">Edit</Link>
+                    </td>
+                    <td className="align-middle">
                           <button type="button" onClick={(e) => Delete(e, p.id)} className="btn btn-info btn-block btn-round">Delete</button>
                           </td>
                         </tr>

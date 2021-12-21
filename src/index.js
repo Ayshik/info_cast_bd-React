@@ -40,7 +40,7 @@ import Add_modaretor from './Pages/Add_modaretor';
 import Package_details from './Pages/Package_details';
 import Modarator_info from './Pages/Modarator_info';
 
-
+import Admin_UP from './Pages/Admin_UP';
 
 
 
@@ -172,6 +172,11 @@ ReactDOM.render(
             <Route exact path="/Modarator_info">
               <Modarator_info/>
             </Route>
+            <Route exact path="/Admin_UP/:id">
+              <Admin_UP/>
+            </Route>
+           
+            
         </Switch>
     </Router>
 
