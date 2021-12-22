@@ -130,11 +130,12 @@ const Student_packages=()=>{
                     </div>
                   </div>
                 </div>
-                <Footer/>
+                
                 {/* End of Packages Includes */}
               </div>
             </section>
             {/* End of Packages Wrap */}<p />
+            <Footer/>
           </div>
     )
   }

@@ -132,10 +132,11 @@ const Gamer_packages=()=>{
                 </div>
               </div>
             </div>
-            <Footer/>
+           
             {/* End of Packages Includes */}
           </div>
         </section>
+        <Footer/>
         {/* End of Packages Wrap */}<p />
       </div>
 
