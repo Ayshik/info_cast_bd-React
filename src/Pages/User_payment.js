@@ -104,6 +104,10 @@ const User_payment=()=>{
                         <label className="form-label" />
                         <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}placeholder="Email" className="form-control" />
                       </div>
+                      <div className="input-group input-group-outline my-3">
+                        <label className="form-label" />
+                    <input type="text" id="cname" name="cardname" placeholder="Phone" className="form-control"/>
+                    </div>
                       <div>
                       <p /><form action="/action_page.php">
                       <label htmlFor="birthday">Month:</label>
@@ -125,14 +129,8 @@ const User_payment=()=>{
                         <label className="form-label" />
                      <input type="text" id="ccnum" name="Pay amount" placeholder="Payment Amount" className="form-control"/>
                      </div>
-                     <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                    <input type="text" id="cname" name="cardname" placeholder="Card Name" className="form-control"/>
-                    </div>
-                    <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                   <input type="text" id="ccnum" name="cardnumber" placeholder="Acount Number" className="form-control"/>
-          </div>
+                     
+                 
                   </div></div>
                       <div className="text-center">
                         <button type="button" onClick={Add} className="btn bg-gradient-primary w-100 my-4 mb-2">Submit</button>
