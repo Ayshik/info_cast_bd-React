@@ -22,28 +22,13 @@ return(
                   <span className="nav-link-text ms-1">Dashboard</span>
                 </a>
               </li>
+              
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/tables.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">table_view</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Add Package</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/billing.html">
+                <a className="nav-link text-white " href="/User_payment">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">receipt_long</i>
                   </div>
-                  <span className="nav-link-text ms-1">Line Connections</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/billing.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">receipt_long</i>
-                  </div>
-                  <span className="nav-link-text ms-1">All Connections</span>
+                  <span className="nav-link-text ms-1">Payment</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -51,15 +36,15 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">view_in_ar</i>
                   </div>
-                  <span className="nav-link-text ms-1">View Customers</span>
+                  <span className="nav-link-text ms-1">Payment History</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/rtl.html">
+                <a className="nav-link text-white " href="/User_RP">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">format_textdirection_r_to_l</i>
                   </div>
-                  <span className="nav-link-text ms-1">Payment Pending</span>
+                  <span className="nav-link-text ms-1">Report Problem</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -67,7 +52,7 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">notifications</i>
                   </div>
-                  <span className="nav-link-text ms-1">Payment List</span>
+                  <span className="nav-link-text ms-1">Report History</span>
                 </a>
               </li>
               <li className="nav-item mt-3">
@@ -78,7 +63,7 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">person</i>
                   </div>
-                  <span className="nav-link-text ms-1">Profile</span>
+                  <span className="nav-link-text ms-1">My Profile</span>
                 </a>
               </li>
               <li className="nav-item">
