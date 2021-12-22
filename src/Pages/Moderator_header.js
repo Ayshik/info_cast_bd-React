@@ -1,6 +1,10 @@
-import React from 'react'
-
+import React, {useState,useEffect} from 'react';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import {Link, useHistory} from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 const Moderator_header=()=>{
+  const user = JSON.parse(localStorage.getItem("user"));
 return(
 
 <aside className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
@@ -22,24 +26,9 @@ return(
                   <span className="nav-link-text ms-1">Dashboard</span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="/Mod_AP">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">table_view</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Add Package</span>
-                </a>
-              </li>
+             
               <li className="nav-item">
                 <a className="nav-link text-white " href="/Mod_LC">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">receipt_long</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Line Connections</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="/Mod_AC">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">receipt_long</i>
                   </div>
@@ -47,11 +36,19 @@ return(
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link text-white " href="/Mod_AC">
+                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i className="material-icons opacity-10">receipt_long</i>
+                  </div>
+                  <span className="nav-link-text ms-1">Customer Table</span>
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link text-white " href="/Mod_VC">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">view_in_ar</i>
                   </div>
-                  <span className="nav-link-text ms-1">View Customers</span>
+                  <span className="nav-link-text ms-1">Complain Box</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -59,44 +56,30 @@ return(
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">format_textdirection_r_to_l</i>
                   </div>
-                  <span className="nav-link-text ms-1">Payment Pending</span>
+                  <span className="nav-link-text ms-1">Payment History</span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="/Mod_PL">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">notifications</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Payment List</span>
-                </a>
-              </li>
+
               <li className="nav-item mt-3">
                 <h6 className="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/profile.html">
+                <Link to={`Modarator_profile/${user.email}`}  className="nav-link text-white ">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">person</i>
                   </div>
                   <span className="nav-link-text ms-1">Profile</span>
-                </a>
+                  </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white " href="../pages/sign-in.html">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">login</i>
+                    <i className="material-icons opacity-10">table_view</i>
                   </div>
-                  <span className="nav-link-text ms-1">Sign In</span>
+                  <span className="nav-link-text ms-1">Request Packages</span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/sign-up.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">assignment</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Sign Up</span>
-                </a>
-              </li>
+              
             </ul>
           </div>
           <div className="sidenav-footer position-absolute w-100 bottom-0 ">

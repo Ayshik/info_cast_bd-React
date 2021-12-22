@@ -613,12 +613,12 @@ return(
         </div>
       </div>
     </div>
-    <Footer/>
+  
   </section>
   {/* End of Product Carousel */}
   <Brands/>
   {/* Footer */}
- 
+  <Footer/>
 </div>
 );
 }

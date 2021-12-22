@@ -47,6 +47,9 @@ const Login = ()=>{
                
                
                 });
+                localStorage.clear();
+           var check= {isLoggedIn:"false"};
+           localStorage.setItem('check',JSON.stringify(check));
             }
            
         }).catch(err=>{

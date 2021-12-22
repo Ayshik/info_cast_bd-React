@@ -42,6 +42,7 @@ import Modarator_info from './Pages/Modarator_info';
 
 import Admin_UP from './Pages/Admin_UP';
 
+import Modarator_profile from './Pages/Modarator_profile';
 
 
 
@@ -175,7 +176,9 @@ ReactDOM.render(
             <Route exact path="/Admin_UP/:id">
               <Admin_UP/>
             </Route>
-           
+            <Route exact path="/Modarator_profile/:id">
+              <Modarator_profile/>
+            </Route>
             
         </Switch>
     </Router>

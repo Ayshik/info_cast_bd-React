@@ -169,7 +169,7 @@ const Request=()=>{
                           <tbody>
                             <tr>
                             <td><strong>{pname}</strong></td>
-                              <td><strong>{price} TK</strong></td>
+                              <td><strong>{price}</strong></td>
                             </tr>
                         
                             <tr>
