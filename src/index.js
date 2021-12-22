@@ -36,6 +36,8 @@ import Mod_VC from './Pages/Mod_VC';
 import Mod_PP from './Pages/Mod_PP';
 import Mod_PL from './Pages/Mod_PL';
 import Mod_AP from './Pages/Mod_AP';
+import User_PF from './Pages/User_PF';
+
 
 
 
@@ -86,6 +88,11 @@ ReactDOM.render(
             <Route exact path="/User_dashboard">
               <User_dashboard/>
             </Route>
+
+            <Route exact path="/User_PF">
+              <User_PF/>
+            </Route>
+
             <Route exact path="/Moderator_dashboard">
               <Moderator_dashboard/>
             </Route>
