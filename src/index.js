@@ -38,9 +38,11 @@ import Mod_PL from './Pages/Mod_PL';
 import Mod_AP from './Pages/Mod_AP';
 import User_PF from './Pages/User_PF';
 
+import Add_modaretor from './Pages/Add_modaretor';
+import Package_details from './Pages/Package_details';
+import Modarator_info from './Pages/Modarator_info';
 
-
-
+import Admin_UP from './Pages/Admin_UP';
 
 
 
@@ -168,7 +170,20 @@ ReactDOM.render(
             <Route exact path="/Request/:pname/:price">
               <Request/>
             </Route>
+            <Route exact path="/Add_modarator">
+              <Add_modaretor/>
+            </Route>
+            <Route exact path="/Package_details">
+              <Package_details/>
+            </Route>
+            <Route exact path="/Modarator_info">
+              <Modarator_info/>
+            </Route>
+            <Route exact path="/Admin_UP/:id">
+              <Admin_UP/>
+            </Route>
            
+            
         </Switch>
     </Router>
 

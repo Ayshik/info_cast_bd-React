@@ -1,57 +1,44 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import {Link, useHistory} from 'react-router-dom';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Package_details from './Package_details';
+import {useParams} from 'react-router-dom';
+
 
 const Admin_AP=()=>{
+  
+ 
+  const {id} = useParams();
+  
+  const history = useHistory();
+  const [Products, setProducts] = useState({
+    name: "",
+    speed: "",
+    pricinglock: "",
+    price: "",
+    category: ""
+  });
+  const { name, speed, pricinglock, price, category } = Products;
+  const onInputChange = e => {
+    setProducts({ ...Products, [e.target.name]: e.target.value });
+  };
 
-  let [name,setName] = useState("");
-  let [speed,setSpeed] = useState("");
-  let [pricinglock,setPricinglock] = useState("");
-  let [price,setPrice] = useState("");
-  let [category,setCategory] = useState("");
+  useEffect(() => {
+    loadUser();
+  }, []);
 
+  const onSubmit = async e => {
+    e.preventDefault();
+    await axios.put(`http://localhost:8000/api/Update_packages/${id}`, Products);
+   history.push("/Package_details");
+  };
 
-  const Add =()=>{    
-           
-    var obj = {name:name, speed:speed,pricinglock:pricinglock,price:price,category:category};
-    axios.post("http://127.0.0.1:8000/api/Addpackages",obj)
-    
-
-    .then(resp=>{
-        var massage = resp.data;
-        console.log(massage);
-        if(massage=="Successful")
-        {
-        toast.success('🦄 Package Added', {
-            position: "top-center",
-            autoClose: 5000,
-           
-            closeOnClick: true,
-           
-           
-           
-            });
-       
-        
-        }
-        else if(massage!="Successful") {
-            toast.error('please Fill all the fields', {
-                position: "top-center",
-                autoClose: 5000,
-               
-                closeOnClick: true,
-               
-               
-               
-                });
-        }
-    }).catch(err=>{
-        console.log(err);
-    }); 
-   
-}
+  const loadUser = async () => {
+    const result = await axios.get(`http://localhost:8000/api/Edit_package/${id}`);
+    setProducts(result.data);
+  };
 
 return(
 <div>
@@ -103,39 +90,39 @@ return(
               <div className="container">
                 <div className="row">
                   <div className="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
-                    <div className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style={{backgroundImage: 'url("assets/Dashboard/img/illustrations/illustration-signup.jpg")', backgroundSize: 'cover'}}>
+                    <div className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style={{ backgroundImage: `url("https://www.pngmart.com/files/11/Internet-Network-PNG-Transparent-HD-Photo.png")`, backgroundSize: 'cover'}}>
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
                     <div className="card card-plain">
                       <div className="card-header">
-                        <h4 className="font-weight-bolder">Add Package</h4>
+                        <h4 className="font-weight-bolder">Update Package</h4>
                       </div>
                       <div className="card-body">
-                        <form role="form">
+                        <form role="form" onSubmit={e => onSubmit(e)}>
                           <div className="input-group input-group-outline mb-3">
                             <label className="form-label"></label>
-                            <input type="text" placeholder='Name' value={name} onChange={(e)=>setName(e.target.value)} className="form-control" />
+                            <input type="text" placeholder='Name' name="name" value={name} onChange={e => onInputChange(e)} className="form-control" />
                           </div>
                           <div className="input-group input-group-outline mb-3">
                             <label className="form-label"></label>
-                            <input type="text" placeholder='Speed' value={speed} onChange={(e)=>setSpeed(e.target.value)} className="form-control" />
+                            <input type="text" placeholder='Speed' name="speed" value={speed} onChange={e => onInputChange(e)} className="form-control" />
                           </div>
                           <div className="input-group input-group-outline mb-3">
                             <label className="form-label"></label>
-                            <input type="text"placeholder='Pricing Lock' value={pricinglock} onChange={(e)=>setPricinglock(e.target.value)} className="form-control" />
+                            <input type="text"placeholder='Pricing Lock' name="pricinglock" value={pricinglock} onChange={e => onInputChange(e)}  className="form-control" />
                           </div>
                           <div className="input-group input-group-outline mb-3">
                             <label className="form-label"></label>
-                            <input type="text" placeholder='Price' value={price} onChange={(e)=>setPrice(e.target.value)} className="form-control" />
+                            <input type="text" placeholder='Price' name="price" value={price} onChange={e => onInputChange(e)} className="form-control" />
                           </div>
                           <div className="input-group input-group-outline mb-3">
                             <label className="form-label"></label>
-                            <input type="text" placeholder='Category' value={category} onChange={(e)=>setCategory(e.target.value)} className="form-control" />
+                            <input type="text" placeholder='Category' name="category" value={category} onChange={e => onInputChange(e)} className="form-control" />
                           </div>
                           
                           <div className="text-center">
-                            <button type="button"  onClick={Add} className="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Add Package</button>
+                            <button type="submit"   className="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Update Package</button>
                           </div>
                         </form>
                       </div>

@@ -32,6 +32,16 @@ return(
                   <span className="nav-link-text ms-1">Add Package</span>
                 </a>
               </li>
+
+              <li className="nav-item">
+                <a className="nav-link text-white " href="/Package_details">
+                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i className="material-icons opacity-10">table_view</i>
+                  </div>
+                  <span className="nav-link-text ms-1">View Packages</span>
+                </a>
+              </li>
+
               <li className="nav-item">
                 <a className="nav-link text-white " href="/Admin_LC">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -73,30 +83,23 @@ return(
                 </a>
               </li>
               <li className="nav-item mt-3">
-                <h6 className="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+                <h6 className="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Accounts</h6>
               </li>
+              
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/profile.html">
+                <a className="nav-link text-white " href="/Add_modarator">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">person</i>
                   </div>
-                  <span className="nav-link-text ms-1">Profile</span>
+                  <span className="nav-link-text ms-1">Add Modaretor</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/sign-in.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">login</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Sign In</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/sign-up.html">
+                <a className="nav-link text-white " href="/Modarator_info">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">assignment</i>
                   </div>
-                  <span className="nav-link-text ms-1">Sign Up</span>
+                  <span className="nav-link-text ms-1">Modarator Information</span>
                 </a>
               </li>
             </ul>
