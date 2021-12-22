@@ -47,6 +47,7 @@ import User_RP from './Pages/User_RP';
 import User_profile from './Pages/User_profile';
 
 import Modarator_profile from './Pages/Modarator_profile';
+import Modarator_user_req from './Pages/Modarator_user_req';
 
 
 
@@ -197,10 +198,12 @@ ReactDOM.render(
             <Route exact path="/Admin_UP/:id">
               <Admin_UP/>
             </Route>
-            <Route exact path="/Modarator_profile/:id">
+            <Route exact path="/Modarator_profile">
               <Modarator_profile/>
             </Route>
-            
+            <Route exact path="/Modarator_user_req">
+              <Modarator_user_req/>
+            </Route>
         </Switch>
     </Router>
 

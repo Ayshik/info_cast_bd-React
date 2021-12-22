@@ -3,12 +3,12 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import {Link, useHistory} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import {useParams} from 'react-router-dom';
+
 
 const Modarator_profile=()=>{
 
   
-  const {id} = useParams();
+  const user = JSON.parse(localStorage.getItem("user"));
   const history = useHistory();
   const [Products, setProducts] = useState({
 
@@ -30,12 +30,20 @@ const Modarator_profile=()=>{
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://localhost:8000/api/Update_mod_profile/6`, Products);
-   history.push("/Moderator_dashboard");
+    await axios.put(`http://localhost:8000/api/Update_mod_profile/${user.email}`, Products);
+    toast.success('Update Done', {
+      position: "top-center",
+      autoClose: 5000,
+     
+      closeOnClick: true,
+     
+     
+     
+      });
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8000/api/Modarator_profile/6`);
+    const result = await axios.get(`http://localhost:8000/api/Modarator_profile/${user.email}`);
     setProducts(result.data);
   };
  
@@ -120,7 +128,7 @@ const Modarator_profile=()=>{
                       </div>
                       <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                        <input type="email" name="email" value={email} onChange={e => onInputChange(e)} placeholder="Email" className="form-control" readOnly/>
+                        <input type="email" name="email" value={email} onChange={e => onInputChange(e)} placeholder="Email" className="form-control" />
                       </div>
                       <div className="input-group input-group-outline mb-3">
                         <label className="form-label" />

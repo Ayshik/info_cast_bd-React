@@ -1,10 +1,6 @@
-import React, {useState,useEffect} from 'react';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import {Link, useHistory} from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
+import React from 'react'
+
 const Moderator_header=()=>{
-  const user = JSON.parse(localStorage.getItem("user"));
 return(
 
 <aside className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
@@ -64,15 +60,15 @@ return(
                 <h6 className="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
               </li>
               <li className="nav-item">
-                <Link to={`Modarator_profile/${user.email}`}  className="nav-link text-white ">
+                <a className="nav-link text-white " href="/Modarator_profile">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">person</i>
                   </div>
                   <span className="nav-link-text ms-1">Profile</span>
-                  </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/sign-in.html">
+                <a className="nav-link text-white " href="/Modarator_user_req">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">table_view</i>
                   </div>
