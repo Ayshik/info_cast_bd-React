@@ -9,18 +9,20 @@ const User_payment=()=>{
 
 
     
-  let [name,setName] = useState("");
-  let [email,setEmail] = useState("");
+  let [c_name,setC_name] = useState("");
+  let [c_email,setC_email] = useState("");
   let [phone,setPhone] = useState("");
-  let [address,setAddress] = useState("");
-  let [password,setPassword] = useState("");
+  let [payment_method,setPayment_method] = useState("");
+  let [amount,setAmount] = useState("");
+  let [month,setMonth] = useState("");
+  let [time,setTime] = useState("");
 
 
   
   const Add =()=>{    
            
-    var obj = {name:name, email:email,phone:phone,address:address,password:password};
-    axios.post("http://127.0.0.1:8000/api/Addmodarator",obj)
+    var obj = {c_name:c_name, c_email:c_email,phone:phone,payment_method:payment_method,amount:amount,month:month,time:time};
+    axios.post("http://127.0.0.1:8000/api/User_payment",obj)
     
 
     .then(resp=>{
@@ -28,7 +30,7 @@ const User_payment=()=>{
         console.log(massage);
         if(massage=="Successful")
         {
-        toast.success('🦄 Modarator Added', {
+        toast.success('🦄 Payment Done', {
             position: "top-center",
             autoClose: 5000,
            
@@ -93,7 +95,7 @@ const User_payment=()=>{
                     <form role="form" className="text-start">
                       <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                        <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Name" className="form-control" />
+                        <input type="text" value={c_name} onChange={(e)=>setC_name(e.target.value)} placeholder="Name" className="form-control" />
                       </div>
                       <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
@@ -102,38 +104,42 @@ const User_payment=()=>{
                       
                       <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}placeholder="Email" className="form-control" />
+                        <input type="email" value={c_email} onChange={(e)=>setC_email(e.target.value)}placeholder="Email" className="form-control" />
                       </div>
-                      <div>
-                      <p /><form action="/action_page.php">
-                      <label htmlFor="birthday">Month:</label>
-                    <input type="date" id="birthday" name="birthday" />
-                          </form><p />
-                      </div>
-                    <div>
 
+                      <div className="input-group input-group-outline my-3">
+                        <label className="form-label" />
+                        <input type="Payment" value={amount} onChange={(e)=>setAmount(e.target.value)}placeholder="Payment Amount" className="form-control" />
+                      </div>
                       
-                      <p> </p><div className="col-50">
-          
-                       <label htmlFor="fname">Accepted Cards</label>
-                     <div className="icon-container">
-                      <i className="fa fa-cc-visa" style={{color: 'navy'}} />
-                          <i className="fa fa-cc-mastercard" style={{color: 'red'}} />
-            
-                     </div>
-                     <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                     <input type="text" id="ccnum" name="Pay amount" placeholder="Payment Amount" className="form-control"/>
-                     </div>
-                     <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                    <input type="text" id="cname" name="cardname" placeholder="Card Name" className="form-control"/>
-                    </div>
-                    <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                   <input type="text" id="ccnum" name="cardnumber" placeholder="Acount Number" className="form-control"/>
-          </div>
-                  </div></div>
+                      
+
+                      <div className="input-group input-group-outline my-3">
+                      <select value={payment_method} onChange={(e)=>setPayment_method(e.target.value)} className="form-select" >
+        <option selected>Please select a payment method</option>
+        <option value={"Rocket"}>Rocket</option>
+        <option value={"Bkash"}>Bkash</option>
+        <option value={"Nagod"}>Nagod</option>
+      </select>
+      </div>             
+      <div className="input-group input-group-outline my-3">
+                      <select value={month} onChange={(e)=>setMonth(e.target.value)} className="form-select" aria-label="Disabled select example" >
+        <option selected>Please select a month</option>
+        <option value={"January"}>January </option>
+        <option value={"February"}>February</option>
+        <option value={"March"}>March</option>
+        <option value={"April"}>April</option>
+        <option value={"May"}>May</option>
+        <option value={"June"}>June</option>
+        <option value={"July"}>July</option>
+        <option value={"August"}>August</option>
+        <option value={"September"}>September</option>
+        <option value={"October"}>October</option>
+        <option value={"November"}>November</option>
+        <option value={"December"}>December</option>
+
+      </select>
+      </div>             
                       <div className="text-center">
                         <button type="button" onClick={Add} className="btn bg-gradient-primary w-100 my-4 mb-2">Submit</button>
                       </div>
