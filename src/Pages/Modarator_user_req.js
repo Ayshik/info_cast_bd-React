@@ -28,21 +28,30 @@ const Modarator_user_req=()=>{
    
 
    
-      axios.put(`/api/Update-request/${id}`)
+      axios.get(`/api/getuser/${id}`)
       
       .then(resp=>{
-        
-      toast.success('updated', {
-        position: "top-center",
-        autoClose: 5000,
-       
-        closeOnClick: true,
-       });
-
-         window.location.href ='/Admin_PL';
-
-    });
+        var massage = resp.data;
+        if(massage=="Successful")
+        {
+        toast.success('🦄 User Account Created', {
+            position: "top-center",
+            autoClose: 5000,
+           
+            closeOnClick: true,
+           
+           
+           
+            
+          });
+          window.location.href ='/Modarator_user_req';
+        }
+    }).catch(err=>{
+        console.log(err);
+    }); 
+   
 }
+
 const Delete = (e,id) => {
   e.preventDefault();
   
