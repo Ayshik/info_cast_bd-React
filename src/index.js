@@ -41,8 +41,10 @@ import User_PF from './Pages/User_PF';
 import Add_modaretor from './Pages/Add_modaretor';
 import Package_details from './Pages/Package_details';
 import Modarator_info from './Pages/Modarator_info';
-
 import Admin_UP from './Pages/Admin_UP';
+import User_payment from './Pages/User_payment';
+import User_RP from './Pages/User_RP';
+import User_profile from './Pages/User_profile';
 
 
 
@@ -93,6 +95,18 @@ ReactDOM.render(
 
             <Route exact path="/User_PF">
               <User_PF/>
+            </Route>
+
+            <Route exact path="/User_payment">
+              <User_payment/>
+            </Route>
+
+            <Route exact path="/User_RP">
+              <User_RP/>
+            </Route>
+
+            <Route exact path="/User_profile">
+              <User_profile/>
             </Route>
 
             <Route exact path="/Moderator_dashboard">
