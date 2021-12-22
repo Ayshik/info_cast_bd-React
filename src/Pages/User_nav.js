@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Redirect } from "react-router-dom";
 
-export class Moderator_nav extends Component {
+export class User_nav extends Component {
    
     render() {
         const user = JSON.parse(localStorage.getItem("user"));
@@ -58,4 +58,4 @@ export class Moderator_nav extends Component {
     }
 }
 
-export default Moderator_nav
+export default User_nav

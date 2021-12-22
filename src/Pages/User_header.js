@@ -32,7 +32,7 @@ return(
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/virtual-reality.html">
+                <a className="nav-link text-white " href="/User_PH">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">view_in_ar</i>
                   </div>
@@ -47,19 +47,11 @@ return(
                   <span className="nav-link-text ms-1">Report Problem</span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/notifications.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">notifications</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Report History</span>
-                </a>
-              </li>
               <li className="nav-item mt-3">
                 <h6 className="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/profile.html">
+                <a className="nav-link text-white " href="/User_profile">
                   <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i className="material-icons opacity-10">person</i>
                   </div>

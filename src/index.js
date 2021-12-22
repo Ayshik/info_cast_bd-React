@@ -44,6 +44,7 @@ import Modarator_info from './Pages/Modarator_info';
 import Admin_UP from './Pages/Admin_UP';
 import User_payment from './Pages/User_payment';
 import User_RP from './Pages/User_RP';
+import User_PH from './Pages/User_PH';
 import User_profile from './Pages/User_profile';
 
 import Modarator_profile from './Pages/Modarator_profile';
@@ -104,6 +105,10 @@ ReactDOM.render(
 
             <Route exact path="/User_RP">
               <User_RP/>
+            </Route>
+
+            <Route exact path="/User_PH">
+              <User_PH/>
             </Route>
 
             <Route exact path="/User_profile">

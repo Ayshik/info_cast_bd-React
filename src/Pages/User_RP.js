@@ -9,18 +9,18 @@ const User_RP=()=>{
 
 
     
-  let [name,setName] = useState("");
-  let [email,setEmail] = useState("");
-  let [phone,setPhone] = useState("");
-  let [address,setAddress] = useState("");
-  let [password,setPassword] = useState("");
+  let [c_email,setC_email] = useState("");
+  let [subject,setSubject] = useState("");
+  let [report,setReport] = useState("");
+  let [time,setTime] = useState("");
+  let [status,setStatus] = useState("");
 
 
   
   const Add =()=>{    
            
-    var obj = {name:name, email:email,phone:phone,address:address,password:password};
-    axios.post("http://127.0.0.1:8000/api/Addmodarator",obj)
+    var obj = {c_email:c_email,subject:subject,report:report,time:time,status:"unread"};
+    axios.post("http://127.0.0.1:8000/api/User_RP",obj)
     
 
     .then(resp=>{
@@ -28,7 +28,7 @@ const User_RP=()=>{
         console.log(massage);
         if(massage=="Successful")
         {
-        toast.success('🦄 Modarator Added', {
+        toast.success('🦄 Report Submited', {
             position: "top-center",
             autoClose: 5000,
            
@@ -99,21 +99,20 @@ const User_RP=()=>{
           
           <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                   <input type="text" id="data1" name="data2" placeholder="Reported By" className="form-control"/>
+                   <input type="text" value={c_email} onChange={(e)=>setC_email(e.target.value)} placeholder="Email" className="form-control"/>
           </div>
 
           <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                   <input type="text" id="data1" name="data2" placeholder="User Email" className="form-control"/>
+                   <input type="text"value={subject} onChange={(e)=>setSubject(e.target.value)} placeholder="Report Subject" className="form-control"/>
           </div>
           
         
            <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                   <input type="text" id="data1" name="data2" placeholder="Description" className="form-control"/>
+                   <input type="text"value={report} onChange={(e)=>setReport(e.target.value)} placeholder="Report Discription"  className="form-control"/>
+                   
           </div>
-         
-         
          
         </form>
         <p />
@@ -123,7 +122,7 @@ const User_RP=()=>{
                       
                     
                       <div className="text-center">
-                        <button type="button" onClick={Add} className="btn bg-gradient-primary w-100 my-4 mb-2">Submit</button>
+                        <button type="button" onClick={Add} className="btn bg-gradient-primary w-100 my-4 mb-2">Submit Report</button>
                       </div>
                     </form>
                   </div>
