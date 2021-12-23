@@ -1,16 +1,29 @@
-import React from 'react'
-import Admin_header from './Admin_header';
-import Admin_nav from './Admin_nav';
-const Admin_dashboard=()=>{
-  return(
-     <div>
-       
-<div className="g-sidenav-show  bg-gray-200">
-  <Admin_header/>
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Admin_header from "./Admin_header";
+import Admin_nav from "./Admin_nav";
+const Admin_dashboard = () => {
+  const [count, setCount] = useState({
+    count: "",
+  });
+
+  useEffect(() => {
+    loadUser();
+  }, []);
+
+  const loadUser = async () => {
+    const result = await axios.get(`http://localhost:8000/api/Package_count`);
+    setCount(result.data);
+  };
+
+  return (
+    <div>
+      <div className="g-sidenav-show  bg-gray-200">
+        <Admin_header />
 
         <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
           {/* Navbar */}
-          <Admin_nav/>
+          <Admin_nav />
           {/* End Navbar */}
           <div className="container-fluid py-4">
             <div className="row">
@@ -21,13 +34,20 @@ const Admin_dashboard=()=>{
                       <i className="material-icons opacity-10">weekend</i>
                     </div>
                     <div className="text-end pt-1">
-                      <p className="text-sm mb-0 text-capitalize">Today's Money</p>
-                      <h4 className="mb-0">$53k</h4>
+                      <p className="text-sm mb-0 text-capitalize">
+                        Total Package
+                      </p>
+                      <h4 className="mb-0">9</h4>
                     </div>
                   </div>
                   <hr className="dark horizontal my-0" />
                   <div className="card-footer p-3">
-                    <p className="mb-0"><span className="text-success text-sm font-weight-bolder">+55% </span>than lask week</p>
+                    <p className="mb-0">
+                      <span className="text-success text-sm font-weight-bolder">
+                        Going{" "}
+                      </span>
+                      Good
+                    </p>
                   </div>
                 </div>
               </div>
@@ -38,13 +58,20 @@ const Admin_dashboard=()=>{
                       <i className="material-icons opacity-10">person</i>
                     </div>
                     <div className="text-end pt-1">
-                      <p className="text-sm mb-0 text-capitalize">Today's Users</p>
+                      <p className="text-sm mb-0 text-capitalize">
+                        Today's Users
+                      </p>
                       <h4 className="mb-0">2,300</h4>
                     </div>
                   </div>
                   <hr className="dark horizontal my-0" />
                   <div className="card-footer p-3">
-                    <p className="mb-0"><span className="text-success text-sm font-weight-bolder">+3% </span>than lask month</p>
+                    <p className="mb-0">
+                      <span className="text-success text-sm font-weight-bolder">
+                        +3%{" "}
+                      </span>
+                      than lask month
+                    </p>
                   </div>
                 </div>
               </div>
@@ -55,13 +82,20 @@ const Admin_dashboard=()=>{
                       <i className="material-icons opacity-10">person</i>
                     </div>
                     <div className="text-end pt-1">
-                      <p className="text-sm mb-0 text-capitalize">New Clients</p>
+                      <p className="text-sm mb-0 text-capitalize">
+                        New Clients
+                      </p>
                       <h4 className="mb-0">3,462</h4>
                     </div>
                   </div>
                   <hr className="dark horizontal my-0" />
                   <div className="card-footer p-3">
-                    <p className="mb-0"><span className="text-danger text-sm font-weight-bolder">-2%</span> than yesterday</p>
+                    <p className="mb-0">
+                      <span className="text-danger text-sm font-weight-bolder">
+                        -2%
+                      </span>{" "}
+                      than yesterday
+                    </p>
                   </div>
                 </div>
               </div>
@@ -78,17 +112,21 @@ const Admin_dashboard=()=>{
                   </div>
                   <hr className="dark horizontal my-0" />
                   <div className="card-footer p-3">
-                    <p className="mb-0"><span className="text-success text-sm font-weight-bolder">+5% </span>than yesterday</p>
+                    <p className="mb-0">
+                      <span className="text-success text-sm font-weight-bolder">
+                        +5%{" "}
+                      </span>
+                      than yesterday
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </main></div>
+        </main>
+      </div>
+    </div>
+  );
+};
 
-     </div>
-    )
-  }
-
-
-export default Admin_dashboard
+export default Admin_dashboard;

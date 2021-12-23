@@ -1,59 +1,68 @@
-import React, {useState,useEffect} from 'react'
-import axios from 'axios';
-import {useParams} from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const User_RP=()=>{
+const User_RP = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
 
+  let [c_email, setC_email] = useState("");
+  let [subject, setSubject] = useState("");
+  let [report, setReport] = useState("");
+  let [time, setTime] = useState("");
+  let [status, setStatus] = useState("");
 
+  const Add = () => {
+    var obj = {
+      c_email: user.email,
+      subject: subject,
+      report: report,
+      time: time,
+      status: "unread",
+    };
+    axios
+      .post("http://127.0.0.1:8000/api/User_RP", obj)
 
-    
-  let [c_email,setC_email] = useState("");
-  let [subject,setSubject] = useState("");
-  let [report,setReport] = useState("");
-  let [time,setTime] = useState("");
-  let [status,setStatus] = useState("");
-
-
-  
-  const Add =()=>{    
-           
-    var obj = {c_email:c_email,subject:subject,report:report,time:time,status:"unread"};
-    axios.post("http://127.0.0.1:8000/api/User_RP",obj)
-    
-
-    .then(resp=>{
+      .then((resp) => {
         var massage = resp.data;
         console.log(massage);
-        if(massage=="Successful")
-        {
-        toast.success('🦄 Report Submited', {
+        if (massage == "Successful") {
+          toast.success("🦄 Report Submited", {
             position: "top-center",
             autoClose: 5000,
-           
-            closeOnClick: true,           
-               
-        });
-    }
-}).catch(err=>{
-    console.log(err);
-}); 
 
-}
-        return (
-          
-      <div className="bg-gray-200">
+            closeOnClick: true,
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  return (
+    <div className="bg-gray-200">
       <div className="container position-sticky z-index-sticky top-0">
         <div className="row">
           <div className="col-12">
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
               <div className="container-fluid ps-2 pe-0">
-                <a className="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
+                <a
+                  className="navbar-brand font-weight-bolder ms-lg-0 ms-3 "
+                  href="../pages/dashboard.html"
+                >
                   Report Box
                 </a>
-                <button className="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <button
+                  className="navbar-toggler shadow-none ms-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navigation"
+                  aria-controls="navigation"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
                   <span className="navbar-toggler-icon mt-2">
                     <span className="navbar-toggler-bar bar1" />
                     <span className="navbar-toggler-bar bar2" />
@@ -63,7 +72,11 @@ const User_RP=()=>{
                 <div className="collapse navbar-collapse" id="navigation">
                   <ul className="navbar-nav mx-auto">
                     <li className="nav-item">
-                      <a className="nav-link d-flex align-items-center me-2 active" aria-current="page" href="/Admin_dashboard">
+                      <a
+                        className="nav-link d-flex align-items-center me-2 active"
+                        aria-current="page"
+                        href="/Admin_dashboard"
+                      >
                         <i className="fa fa-chart-pie opacity-6 text-dark me-1" />
                         Dashboard
                       </a>
@@ -77,7 +90,13 @@ const User_RP=()=>{
         </div>
       </div>
       <main className="main-content  mt-0">
-        <div className="page-header align-items-start min-vh-100" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80")'}}>
+        <div
+          className="page-header align-items-start min-vh-100"
+          style={{
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80")',
+          }}
+        >
           <span className="mask bg-gradient-dark opacity-6" />
           <div className="container my-auto">
             <div className="row">
@@ -85,44 +104,71 @@ const User_RP=()=>{
                 <div className="card z-index-0 fadeIn3 fadeInBottom">
                   <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div className="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                      <h4 className="text-white font-weight-bolder text-center mt-2 mb-0">My Report</h4>
-                      
+                      <h4 className="text-white font-weight-bolder text-center mt-2 mb-0">
+                        My Report
+                      </h4>
                     </div>
                   </div>
                   <div className="card-body">
                     <form role="form" className="text-start">
                       <div>
-                      <p /><form method="post" action="//submit.form" onsubmit="return validateForm();">
-          <div style={{maxWidth: '400px'}}>
-          </div>
-          <div style={{paddingBottom: '18px', fontSize : '24px'}}>Report An Issue</div>
-          
-          <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                   <input type="text" value={c_email} onChange={(e)=>setC_email(e.target.value)} placeholder="Email" className="form-control"/>
-          </div>
+                        <p />
+                        <form
+                          method="post"
+                          action="//submit.form"
+                          onsubmit="return validateForm();"
+                        >
+                          <div style={{ maxWidth: "400px" }}></div>
+                          <div
+                            style={{ paddingBottom: "18px", fontSize: "24px" }}
+                          >
+                            Report An Issue
+                          </div>
 
-          <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                   <input type="text"value={subject} onChange={(e)=>setSubject(e.target.value)} placeholder="Report Subject" className="form-control"/>
-          </div>
-          
-        
-           <div className="input-group input-group-outline my-3">
-                        <label className="form-label" />
-                   <input type="text"value={report} onChange={(e)=>setReport(e.target.value)} placeholder="Report Discription"  className="form-control"/>
-                   
-          </div>
-         
-        </form>
-        <p />
-      </div>
-                   
-                      
-                      
-                    
+                          <div className="input-group input-group-outline my-3">
+                            <label className="form-label" />
+                            <input
+                              type="text"
+                              value={user.email}
+                              onChange={(e) => setC_email(e.target.value)}
+                              placeholder="Email"
+                              className="form-control"
+                            />
+                          </div>
+
+                          <div className="input-group input-group-outline my-3">
+                            <label className="form-label" />
+                            <input
+                              type="text"
+                              value={subject}
+                              onChange={(e) => setSubject(e.target.value)}
+                              placeholder="Report Subject"
+                              className="form-control"
+                            />
+                          </div>
+
+                          <div className="input-group input-group-outline my-3">
+                            <label className="form-label" />
+                            <input
+                              type="text"
+                              value={report}
+                              onChange={(e) => setReport(e.target.value)}
+                              placeholder="Report Discription"
+                              className="form-control"
+                            />
+                          </div>
+                        </form>
+                        <p />
+                      </div>
+
                       <div className="text-center">
-                        <button type="button" onClick={Add} className="btn bg-gradient-primary w-100 my-4 mb-2">Submit Report</button>
+                        <button
+                          type="button"
+                          onClick={Add}
+                          className="btn bg-gradient-primary w-100 my-4 mb-2"
+                        >
+                          Submit Report
+                        </button>
                       </div>
                     </form>
                   </div>
@@ -134,8 +180,7 @@ const User_RP=()=>{
       </main>
       <ToastContainer />
     </div>
-        )
-    }
+  );
+};
 
-
-export default User_RP
+export default User_RP;
