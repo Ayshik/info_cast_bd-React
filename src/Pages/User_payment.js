@@ -8,9 +8,9 @@ const User_payment=()=>{
 
 
 
-    
+  const user = JSON.parse(localStorage.getItem("user"));
   let [c_name,setC_name] = useState("");
-  let [c_email,setC_email] = useState("");
+  let [email,setC_email] = useState("");
   let [phone,setPhone] = useState("");
   let [payment_method,setPayment_method] = useState("");
   let [amount,setAmount] = useState("");
@@ -21,7 +21,7 @@ const User_payment=()=>{
   
   const Add =()=>{    
            
-    var obj = {c_name:c_name, c_email:c_email,phone:phone,payment_method:payment_method,amount:amount,month:month,time:time};
+    var obj = {c_name:c_name, c_email:user.email,phone:phone,payment_method:payment_method,amount:amount,month:month,time:time};
     axios.post("http://127.0.0.1:8000/api/User_payment",obj)
     
 
@@ -104,7 +104,7 @@ const User_payment=()=>{
                       
                       <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                        <input type="email" value={c_email} onChange={(e)=>setC_email(e.target.value)}placeholder="Email" className="form-control" />
+                        <input type="email" value={user.email} onChange={(e)=>setC_email(e.target.value)}placeholder="Email" className="form-control" readOnly />
                       </div>
 
                       <div className="input-group input-group-outline my-3">

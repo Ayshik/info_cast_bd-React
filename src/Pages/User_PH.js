@@ -6,13 +6,13 @@ import {Link, useHistory} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import User_header from './User_header';
 const User_PH=()=>{
-
+    const user = JSON.parse(localStorage.getItem("user"));
   const history = useHistory();
   const [products, setProducts] = useState([]);
     
     
   useEffect(()=>{
-      axios.get("http://localhost:8000/api/Payment_History")
+    axios.get(`http://localhost:8000/api/User_payment_History/${user.email}`)
       .then(resp=>{
           console.log(resp.data);
           setProducts(resp.data);

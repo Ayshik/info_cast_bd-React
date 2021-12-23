@@ -58,22 +58,7 @@ return(
                   <span className="nav-link-text ms-1">My Profile</span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/sign-in.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">login</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Sign In</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white " href="../pages/sign-up.html">
-                  <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                    <i className="material-icons opacity-10">assignment</i>
-                  </div>
-                  <span className="nav-link-text ms-1">Sign Up</span>
-                </a>
-              </li>
+              
             </ul>
           </div>
           <div className="sidenav-footer position-absolute w-100 bottom-0 ">

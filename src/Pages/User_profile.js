@@ -3,12 +3,12 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import {Link, useHistory} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import {useParams} from 'react-router-dom';
+
 
 const User_profile=()=>{
 
   
-  const {id} = useParams();
+  const user = JSON.parse(localStorage.getItem("user"));
   const history = useHistory();
   const [Products, setProducts] = useState({
 
@@ -30,12 +30,20 @@ const User_profile=()=>{
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://localhost:8000/api/Update_mod_profile/6`, Products);
-   history.push("/Moderator_dashboard");
+    await axios.put(`http://localhost:8000/api/Update_user_profile/${user.email}`, Products);
+    toast.success('Update Done', {
+      position: "top-center",
+      autoClose: 5000,
+     
+      closeOnClick: true,
+     
+     
+     
+      });
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8000/api/Modarator_profile/6`);
+    const result = await axios.get(`http://localhost:8000/api/User_profile/${user.email}`);
     setProducts(result.data);
   };
  
@@ -84,7 +92,7 @@ const User_profile=()=>{
                 <div className="card z-index-0 fadeIn3 fadeInBottom">
                   <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div className="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                      <h4 className="text-white font-weight-bolder text-center mt-2 mb-0">Update Modaretor</h4>
+                      <h4 className="text-white font-weight-bolder text-center mt-2 mb-0">Update User</h4>
                       <div className="row mt-3">
                         <div className="col-2 text-center ms-auto">
                           <a className="btn btn-link px-3" href="javascript:;">
@@ -120,7 +128,7 @@ const User_profile=()=>{
                       </div>
                       <div className="input-group input-group-outline my-3">
                         <label className="form-label" />
-                        <input type="email" name="email" value={email} onChange={e => onInputChange(e)} placeholder="Email" className="form-control" readOnly/>
+                        <input type="email" name="email" value={email} onChange={e => onInputChange(e)} placeholder="Email" className="form-control" />
                       </div>
                       <div className="input-group input-group-outline mb-3">
                         <label className="form-label" />
