@@ -41,7 +41,7 @@ const User_dashboard=()=>{
                     </div>
                     <div className="text-end pt-1">
                       <p className="text-sm mb-0 text-capitalize">My Line History</p>
-                      <h4 className="mb-0">$103,430</h4>
+                      <h4 className="mb-0">430</h4>
                     </div>
                   </div>
                   <hr className="dark horizontal my-0" />
